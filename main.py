@@ -7,16 +7,16 @@ from seleniumtest import *
 current_status = None
 
 def performAction1():
-    
+    restartRouter()
     
 def performAction2():
-    print("Some2Code")
+    print("Konekcija nije ostvarena")
 
 def performAction3():
-    print("Konektovan si glupane")
+    print("Konekcija uspostavljena i radi")
 
 while True:
-    current_status = check_connection()
+    current_status = int(check_connection())
     #if there's conn problem
     if current_status == 201:
         performAction1()

@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import netifaces
 import time, os
-
+#Why Selenium couldn't find any element on page before I used time.sleep()? 
 def getGateway():
     gws = netifaces.gateways()
     gateway = "http://" + str(gws['default'][netifaces.AF_INET][0])
@@ -35,4 +35,3 @@ def restartRouter():
     driver.find_element(By.XPATH,"//*[@id=\"confirmOK\"]").click()
     driver.quit()
 
-restartRouter()
