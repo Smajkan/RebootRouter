@@ -4,7 +4,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import netifaces
-import time, os
  
 def getGateway():
     gws = netifaces.gateways()
@@ -24,14 +23,11 @@ def restartRouter():
     passwrd.clear()
     passwrd.send_keys("user")
     #passwrd.send_keys(Keys.RETURN)
-    driver.find_element(By.XPATH,"//*[@id=\"LoginId\"]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH,"//*[@id=\"mmManagDiag\"]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH,"//*[@id=\"mmManagDevice\"]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH,"//*[@id=\"Btn_restart\"]").click()
-    time.sleep(3)
-    driver.find_element(By.XPATH,"//*[@id=\"confirmOK\"]").click()
+    
+    
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"LoginId\"]"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"mmManagDiag\"]"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"mmManagDevice\"]"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"Btn_restart\"]"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"confirmOK\"]"))).click()
     driver.quit()
-

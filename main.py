@@ -1,7 +1,6 @@
 from checkconnection import *
 from seleniumtest import *
 
-
 # 200 = if user's not connected to internet at all / doesn't have internet enabled
 # 201 = internet connection problem
 current_status = None
@@ -19,7 +18,6 @@ def performAction3():
   
 def countAction():
     global no_actions
-    no_actions = 0
     no_actions += 1
     return no_actions
 
@@ -52,6 +50,3 @@ while True:
                 
     else:
         performAction3()
-
-
-        
