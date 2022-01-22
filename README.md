@@ -1,4 +1,4 @@
-<h2 align="center"><u>RouterReboot</u></h2>
+<h2 align="center"><u>RebootRouter</u></h2>
 
 ![PERFORM ROUTER RESTART WHEN THERE'S NO CONNECTION](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F440%2F353%2Foriginal%2Fvector-router-icon.jpg&f=1&nofb=1)
 <h4 align="center"> PERFORM ROUTER RESTART WHEN THERE'S NO CONNECTION </h4>
