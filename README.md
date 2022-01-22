@@ -44,8 +44,14 @@ Also, me and my friend will be developing this even further with some cool featu
 ### [+] Credits 
  EmilKavara
 
+### [+] Following updates 
+ - Implementing GUI
+ - Implement automatic email sending with log files to provider 
+ - Implement automatic WiFi enabler + Network connecter
+ - Implementing support to other routers
+
 ### [+] Disclaimer 
-This repository is still under developments.
+This repository is still under developments and currently is only supporting ZTE ZXHN H267N V1.0. 
 
 ### [+] Find me on 
 <a href="mailto:aldinsmajkan2@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-aldinsmajkan2@gmail.com-blue?style=for-the-badge&logo=gmail"></a>
