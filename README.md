@@ -1,42 +1,52 @@
+<h2 align="center"><u>RouterReboot</u></h2>
 
-# RouterReboot
+![PERFORM ROUTER RESTART WHEN THERE'S NO CONNECTION](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F440%2F353%2Foriginal%2Fvector-router-icon.jpg&f=1&nofb=1)
+<h4 align="center"> PERFORM ROUTER RESTART WHEN THERE'S NO CONNECTION </h4>
 
-So, recently I am getting frustrated over internet connection, because I sometimes don't have internet access and to bring it back to life I need to perform router reboot.
-Sometimes it happens often, so because of it I am automating that stuff...
+<p align="center">
+    <img src="https://img.shields.io/github/stars/Smajkan/RebootRouter?style=for-the-badge&color=orange">
+    <img src="https://img.shields.io/github/forks/Smajkan/RebootRouter?style=for-the-badge&color=purple">
+    <img src="https://img.shields.io/github/license/Smajkan/RebootRouter?style=for-the-badge&color=blue">
+    <img src="https://img.shields.io/github/issues/Smajkan/RebootRouter?style=for-the-badge&color=red">
+    <img src="https://img.shields.io/github/contributors/Smajkan/RebootRouter?style=for-the-badge&color=cyan">
+<br>
+    <img src="https://img.shields.io/badge/Author-Aldin Smajkan-magenta?style=flat-square">
+    <img src="https://img.shields.io/badge/Open%20Source-Yes-orange?style=flat-square">
+    <img src="https://img.shields.io/badge/Maintained-Yes-cyan?style=flat-square">
+    <img src="https://img.shields.io/badge/Made%20In-BiH-green?style=flat-square">
+    <img src="https://img.shields.io/badge/Written%20In-Python-blue?style=flat-square">
+<br>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Smajkan&repo=RebootRouter&theme=synthwave">
+</p>
 
-This also might turn into something bigger, I might will make email sender to my internet provider, etc...
+### [+] Description
+Previously, I've faced some problems with my internet connection, where I am getting "No internet access", to bring internet connection to life I have to go and restart router and sometimes it's just annoying. 
 
+Also, me and my friend will be developing this even further with some cool features, and we are making it open-source.
 
+### [+] Installation
+ - `  git clone https://github.com/Smajkan/RebootRouter.git`
+ - `  cd RebootRouter`
 
-## Run Locally
+### [+] Usage
+`python3 main.py`
 
-Clone the project
+### [+] Features
+ - Obtaining your gateway
+ - Restarting router
 
-```bash
-  git clone https://github.com/Smajkan/RebootRouter.git
-```
+### [+] Requirements
+ - Selenium
+ - Requests
+ - Netifaces
+ - Python 3.9.10
 
-Go to the project directory
+### [+] Credits 
+ EmilKavara
 
-```bash
-  cd my-project
-```
+### [+] Disclaimer 
+This repository is still under developments.
 
-Install dependencies
-
-```bash
-  pip3 install selenium
-  pip3 install requests
-  pip3 install netifaces
-```
-
-Run code
-
-```bash
-  python3 main.py
-```
-
-
-## CURRENTLY IN DEVELOPMENT
-
+### [+] Find me on 
+<a href="mailto:aldinsmajkan2@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-aldinsmajkan2@gmail.com-blue?style=for-the-badge&logo=gmail"></a>
 

@@ -6,6 +6,7 @@ from os import path
 # 200 = if user's not connected to internet at all / doesn't have internet enabled
 # 201 = internet connection problem
 
+#GLOBAL_VARIABLES
 current_status = None
 no_actions = 0
 restartsDone = 0
