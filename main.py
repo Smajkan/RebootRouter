@@ -8,6 +8,7 @@ current_status = None
 
 def performAction1():
     restartRouter()
+    restartsDone = countAction()
     
 def performAction2():
     print("Konekcija nije ostvarena")
@@ -28,13 +29,20 @@ def ConnectionBack():
 while True:
     current_status = int(check_connection())
     #if there's conn problem
-    if current_status == 201:
-        performAction1()
-        counter = countAction()
-        if counter >= 1:
+    if current_status == 201: #jeste 201
+        performAction1() #uradi ovo
+        #uradio je action
+        timesexecuted = 0 # setuj ovo na nula
+        timesexecuted = countAction() 
+        #provjerio je koliko se puta executovo kod
+        if timesexecuted >= 1:
+            #ukoliko je broj executovanja veci od jedan
             time.sleep(180)
+            #stavi aplikaciju da spava
         else:
             continue
+            
+
             
     elif current_status == 200:
         performAction2()
