@@ -2,6 +2,8 @@ from checkconnection import *
 from seleniumtest import *
 import os.path
 from os import path
+from datetime import datetime
+
 
 # 200 = if user's not connected to internet at all / doesn't have internet enabled
 # 201 = internet connection problem
@@ -11,19 +13,41 @@ current_status = None
 no_actions = 0
 restartsDone = 0
 
+
+#Currently in development since I realized that it'd be pretty handy if it finds available SSIDs and then checks 
+#if there's connection with the same name and then connect on it
+"""
+#This restarts WiFi
+def restart_wifi_adapterWin():
+    # scan available Wifi networks
+    os.system('cmd /c "netsh wlan show networks"')
+ 
+    # input Wifi name
+    SSID_name = "SmajkanNET"
+ 
+    # connect to the given wifi network
+    os.system(f'''cmd /c "netsh wlan connect name={SSID_name}"''')
+"""
+
+#Vraca trenutno vrijeme
+def currentTime():
+    return datetime.now().strftime('[%Y-%m-%d %H:%M]')
+
 #This function is used to write to files
-def writeToFile(WriteToFileResets):
-    myLogFile.write(str(WriteToFileResets))
+def writeToFile(WriteToFileResets,logFile):
+    mrkp1 = "===================="
+    logFile.write(mrkp1 + "Reboot performed at: " + str(currentTime()) + mrkp1 + "\n" )
+    logFile.write(mrkp1 + "Numbers of reboots performed:" + str(WriteToFileResets) + mrkp1 + "\n")
     
 
 #This function is used to createLogFile, in case there's LogFile that exist it will just proceed with writing to file
 def createLogFile(restartsDone):
-    if path.exists("LogFile.txt") == True:
-        global myLogFile
+    if path.exists("LogFile.txt") == True:  #U slucaju da vec postoji "LogFile.txt" nastavljamo praviti log na taj fajl
+        myLogFile = open("LogFile.txt","a")
+        writeToFile(restartsDone,myLogFile)
+    else: #U slucaju da log file ne postoji, kreiramo fajl i onda pisemo u njega
         myLogFile = open("LogFile.txt","w+")
-        writeToFile(restartsDone)
-    else:
-        writeToFile(restartsDone)
+        writeToFile(restartsDone,myLogFile)
 
 #performAction: 1. Reboots router ; 2. Counts how many times restarts're done;
 def performAction1():
@@ -34,6 +58,7 @@ def performAction1():
 
 #Currently in development: Will try to add option to automatically re-enable connection and connect to available network    
 def performAction2():
+    #restart_wifi_adapterWin()
     print("Konekcija nije ostvarena")
 
 
@@ -54,6 +79,7 @@ def ConnectionBack():
 
 
 #This is kinda main function for now
+
 while True:
     current_status = int(check_connection())
     #if there's conn problem
